@@ -26,8 +26,5 @@ jobs:
             pyproject.toml
             .python-version
 
-      - name: Install test dependencies
-        run: uv pip install --system pytest
-
       - name: Run tests
-        run: python -m pytest -v
+        run: uv tool run pytest -v
